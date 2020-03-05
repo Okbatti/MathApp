@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Math App</string>
+    <string name="drawerOpen">drawerOpen</string>
+    <string name="drawerClose">drawerClose</string>
+    <string name="dashBoard">Dash Board</string>
+</resources>
