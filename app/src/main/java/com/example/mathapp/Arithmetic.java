@@ -9,9 +9,22 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Arithmetic extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -19,6 +32,10 @@ public class Arithmetic extends AppCompatActivity implements NavigationView.OnNa
     Toolbar toolbar;
     NavigationView navigationView;
     ActionBarDrawerToggle toggle;
+    ArrayAdapter adapter;
+    private static final String TAG = "MainActivity";
+    ListView list;
+    EditText theFilter;
 
     @SuppressLint("RestrictedApi")
     @Override
@@ -37,6 +54,52 @@ public class Arithmetic extends AppCompatActivity implements NavigationView.OnNa
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
         getSupportActionBar().setTitle("Arithmetic");
+
+
+        list = (ListView) findViewById(R.id.list);
+        theFilter = (EditText) findViewById(R.id.edit_text);
+        Log.d(TAG, "onCreate: Started.");
+        ArrayList<String> names = new ArrayList<>();
+        names.add("Expansions");
+        names.add("Indices");
+        names.add("Factorization");
+        names.add("Logarithms");
+
+        adapter = new ArrayAdapter(this, R.layout.list_item, names);
+        list.setAdapter(adapter);
+        theFilter.addTextChangedListener(new TextWatcher() {;
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                (Arithmetic.this).adapter.getFilter().filter(s);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                    if(position == 0) {
+                        Intent intent_expansions = new Intent(Arithmetic.this, Expansions.class);
+                        startActivity(intent_expansions);
+                    }
+
+                    if(position == 1) {
+                        Intent intent_expansions = new Intent(Arithmetic.this, AboutUs.class);
+                        startActivity(intent_expansions);
+                    }
+                }
+            });
 
     }
 

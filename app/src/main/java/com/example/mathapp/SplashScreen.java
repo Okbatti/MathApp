@@ -46,7 +46,6 @@ public class SplashScreen extends AppCompatActivity implements NavigationView.On
         getSupportActionBar().setTitle("DashBoard");
 
         ahare_icon = findViewById(R.id.share_icon);
-
         ahare_icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

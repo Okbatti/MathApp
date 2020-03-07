@@ -40,7 +40,7 @@ public class AboutUs extends AppCompatActivity implements NavigationView.OnNavig
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-        getSupportActionBar().setTitle("DashBoard");
+        getSupportActionBar().setTitle("About Us");
 
     }
 
