@@ -3,23 +3,51 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    tools:openDrawer="start"
     android:id="@+id/drawer"
-    android:background="@color/c2"
+    android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:layout_gravity="start">
 
-        <RelativeLayout
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:background="@color/c1" />
 
-            <androidx.appcompat.widget.Toolbar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/toolbar"
-                android:background="@color/c1"/>
+        <ImageView
+            android:id="@+id/arithmetic_logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/arithmetic_logo"/>
 
-        </RelativeLayout>
+        <ImageView
+            android:id="@+id/tab"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/math_tables"
+            android:layout_alignParentRight="true"/>
+
+        <ImageView
+            android:id="@+id/share_icon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_below="@+id/arithmetic_logo"
+            android:src="@drawable/share_icon" />
+
+    </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="match_parent"
@@ -33,4 +61,3 @@
 
 
 </androidx.drawerlayout.widget.DrawerLayout>
-

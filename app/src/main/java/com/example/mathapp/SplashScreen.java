@@ -8,6 +8,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,6 +23,8 @@ public class SplashScreen extends AppCompatActivity implements NavigationView.On
     Toolbar toolbar;
     NavigationView navigationView;
     ActionBarDrawerToggle toggle;
+    ImageView ahare_icon;
+    ImageView arithmetic_logo;
 
     @SuppressLint("RestrictedApi")
     @Override
@@ -32,6 +35,7 @@ public class SplashScreen extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawer);
         toolbar = findViewById(R.id.toolbar);
         navigationView = findViewById(R.id.navigationView);
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
@@ -40,6 +44,29 @@ public class SplashScreen extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
         getSupportActionBar().setTitle("DashBoard");
+
+        ahare_icon = findViewById(R.id.share_icon);
+
+        ahare_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent shareIntent = new Intent();
+                shareIntent.setType("text/plain");
+                shareIntent.setAction(Intent.ACTION_SEND);
+                shareIntent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.apps.nbu.paisa.user"));
+                startActivity(Intent.createChooser(shareIntent, "Share using: "));
+            }
+        });
+
+
+        arithmetic_logo = findViewById(R.id.arithmetic_logo);
+        arithmetic_logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_arithmetic = new Intent(SplashScreen.this, Arithmetic.class);
+                startActivity(intent_arithmetic);
+            }
+        });
 
     }
 
@@ -59,5 +86,7 @@ public class SplashScreen extends AppCompatActivity implements NavigationView.On
         }
 
         return false;
+
+
     }
 }
