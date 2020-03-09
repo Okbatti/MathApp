@@ -33,7 +33,6 @@ public class Arithmetic extends AppCompatActivity implements NavigationView.OnNa
     NavigationView navigationView;
     ActionBarDrawerToggle toggle;
     ArrayAdapter adapter;
-    private static final String TAG = "MainActivity";
     ListView list;
     EditText theFilter;
 
@@ -57,46 +56,31 @@ public class Arithmetic extends AppCompatActivity implements NavigationView.OnNa
 
 
         list = (ListView) findViewById(R.id.list);
-        theFilter = (EditText) findViewById(R.id.edit_text);
-        Log.d(TAG, "onCreate: Started.");
-        ArrayList<String> names = new ArrayList<>();
+        final ArrayList<String> names = new ArrayList<>();
         names.add("Expansions");
-        names.add("Indices");
         names.add("Factorization");
+        names.add("Indices");
         names.add("Logarithms");
 
         adapter = new ArrayAdapter(this, R.layout.list_item, names);
         list.setAdapter(adapter);
-        theFilter.addTextChangedListener(new TextWatcher() {;
-
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                (Arithmetic.this).adapter.getFilter().filter(s);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
 
             list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                    if(position == 0) {
+                    if (position == 0) {
                         Intent intent_expansions = new Intent(Arithmetic.this, Expansions.class);
                         startActivity(intent_expansions);
                     }
 
-                    if(position == 1) {
-                        Intent intent_expansions = new Intent(Arithmetic.this, AboutUs.class);
-                        startActivity(intent_expansions);
+                    if (position == 2) {
+                        Intent intent_indices = new Intent(Arithmetic.this, Indices.class);
+                        startActivity(intent_indices);
+                    }
+
+                    if (position == 3) {
+                        Intent intent_logarithms = new Intent(Arithmetic.this, Logarithm.class);
+                        startActivity(intent_logarithms);
                     }
                 }
             });

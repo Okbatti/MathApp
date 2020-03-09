@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Expansions"></activity>
+        <activity android:name=".Indices"></activity>
+        <activity android:name=".Logarithm" />
+        <activity android:name=".Factorization" />
+        <activity android:name=".Expansions" />
         <activity android:name=".Arithmetic" />
         <activity android:name=".AboutUs" />
         <activity android:name=".SplashScreen" />

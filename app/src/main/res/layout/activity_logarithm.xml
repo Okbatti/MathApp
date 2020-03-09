@@ -33,7 +33,7 @@
             android:layout_marginLeft="75dp"
             android:layout_marginTop="14dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Expansions"
+            android:text="Logarithms"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp" />
 
@@ -41,8 +41,8 @@
             android:id="@+id/logarithm_pic"
             android:layout_width="700dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/expansions_text" />
-
+            android:src="@drawable/logaritm_text"
+            android:paddingBottom="70dp"/>
 
     </RelativeLayout>
 
