@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class Factorization extends AppCompatActivity {
+public class Banking extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     Toolbar toolbar;
@@ -18,7 +18,7 @@ public class Factorization extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_factorization);
+        setContentView(R.layout.activity_banking);
 
         drawerLayout = findViewById(R.id.drawer);
         toolbar = findViewById(R.id.toolbar);
@@ -27,10 +27,9 @@ public class Factorization extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent_back = new Intent(Factorization.this, Arithmetic.class);
+                Intent intent_back = new Intent(Banking.this, Arithmetic.class);
                 startActivity(intent_back);
             }
         });
     }
 }
-

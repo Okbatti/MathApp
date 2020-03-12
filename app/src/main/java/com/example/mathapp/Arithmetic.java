@@ -61,6 +61,7 @@ public class Arithmetic extends AppCompatActivity implements NavigationView.OnNa
         names.add("Factorization");
         names.add("Indices");
         names.add("Logarithms");
+        names.add("Banking");
 
         adapter = new ArrayAdapter(this, R.layout.list_item, names);
         list.setAdapter(adapter);
@@ -73,6 +74,11 @@ public class Arithmetic extends AppCompatActivity implements NavigationView.OnNa
                         startActivity(intent_expansions);
                     }
 
+                    if (position == 1) {
+                        Intent intent_factorization = new Intent(Arithmetic.this, Factorization.class);
+                        startActivity(intent_factorization);
+                    }
+
                     if (position == 2) {
                         Intent intent_indices = new Intent(Arithmetic.this, Indices.class);
                         startActivity(intent_indices);
@@ -81,6 +87,11 @@ public class Arithmetic extends AppCompatActivity implements NavigationView.OnNa
                     if (position == 3) {
                         Intent intent_logarithms = new Intent(Arithmetic.this, Logarithm.class);
                         startActivity(intent_logarithms);
+                    }
+
+                    if (position == 4) {
+                        Intent intent_banking = new Intent(Arithmetic.this, Banking.class);
+                        startActivity(intent_banking);
                     }
                 }
             });

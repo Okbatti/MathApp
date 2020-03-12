@@ -6,7 +6,8 @@
     android:id="@+id/drawer"
     android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:layout_gravity="start">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -32,17 +33,17 @@
             android:layout_marginLeft="75dp"
             android:layout_marginTop="14dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Factorization"
+            android:text="Banking"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp" />
 
         <ImageView
-            android:id="@+id/fact"
+            android:id="@+id/banking"
             android:layout_width="700dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/factorization_pic"
-            android:layout_marginRight="35dp"
-            android:layout_marginTop="66dp"/>
+            android:layout_marginBottom="80dp"
+            android:src="@drawable/banking_pic" />
+
 
     </RelativeLayout>
 
