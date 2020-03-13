@@ -1,6 +1,6 @@
 package com.example.mathapp;
+
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -8,35 +8,43 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class SplashScreen extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Math_Tables extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
     Toolbar toolbar;
     NavigationView navigationView;
     ActionBarDrawerToggle toggle;
-    ImageView ahare_icon;
-    ImageView arithmetic_logo;
-    ImageView math_table_logo;
+    ArrayAdapter adapter;
+    ListView list;
+    EditText theFilter;
 
     @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        setContentView(R.layout.activity_math__tables);
 
         drawerLayout = findViewById(R.id.drawer);
         toolbar = findViewById(R.id.toolbar);
         navigationView = findViewById(R.id.navigationView);
-
         setSupportActionBar(toolbar);
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
@@ -44,39 +52,25 @@ public class SplashScreen extends AppCompatActivity implements NavigationView.On
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-        getSupportActionBar().setTitle("DashBoard");
+        getSupportActionBar().setTitle("Math Tables");
 
-        ahare_icon = findViewById(R.id.share_icon);
-        ahare_icon.setOnClickListener(new View.OnClickListener() {
+        list = (ListView) findViewById(R.id.list);
+        final ArrayList<String> names = new ArrayList<>();
+        names.add("Trigonometry Table");
+
+        adapter = new ArrayAdapter(this, R.layout.list_item, names);
+        list.setAdapter(adapter);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent shareIntent = new Intent();
-                shareIntent.setType("text/plain");
-                shareIntent.setAction(Intent.ACTION_SEND);
-                shareIntent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.apps.nbu.paisa.user"));
-                startActivity(Intent.createChooser(shareIntent, "Share using: "));
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                    Intent intent_trigonometry_table = new Intent(Math_Tables.this, Trigonometry_Table.class);
+                    startActivity(intent_trigonometry_table);
+                }
             }
         });
-
-        arithmetic_logo = findViewById(R.id.arithmetic_logo);
-        arithmetic_logo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent_arithmetic = new Intent(SplashScreen.this, Arithmetic.class);
-                startActivity(intent_arithmetic);
-            }
-        });
-
-        math_table_logo = findViewById(R.id.math_tables_logo);
-        math_table_logo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent_math_tables = new Intent(SplashScreen.this, Math_Tables.class);
-                startActivity(intent_math_tables);
-            }
-        });
-
-    }
+}
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
