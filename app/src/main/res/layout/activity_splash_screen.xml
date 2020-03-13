@@ -39,14 +39,14 @@
             android:layout_alignParentRight="true"/>
 
         <ImageView
-            android:id="@+id/share_icon"
+            android:id="@+id/trigonometru_icon"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginTop="20dp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="40dp"
             android:layout_below="@+id/arithmetic_logo"
-            android:src="@drawable/share_icon" />
+            android:src="@drawable/trigonometry_logo" />
 
         <ImageView
             android:id="@+id/geometry_logo"
@@ -56,6 +56,14 @@
             android:layout_marginLeft="40dp"
             android:layout_below="@+id/arithmetic_logo"
             android:src="@drawable/geometry_logo" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_below="@+id/geometry_logo"
+            android:src="@drawable/share_icon" />
 
     </RelativeLayout>
 
