@@ -26,7 +26,7 @@ import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Arithmetic extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class Geometry extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
     Toolbar toolbar;
@@ -34,13 +34,12 @@ public class Arithmetic extends AppCompatActivity implements NavigationView.OnNa
     ActionBarDrawerToggle toggle;
     ArrayAdapter adapter;
     ListView list;
-    EditText theFilter;
 
     @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_arithmetic);
+        setContentView(R.layout.activity_geometry);
 
         drawerLayout = findViewById(R.id.drawer);
         toolbar = findViewById(R.id.toolbar);
@@ -52,49 +51,24 @@ public class Arithmetic extends AppCompatActivity implements NavigationView.OnNa
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-        getSupportActionBar().setTitle("Arithmetic");
-
+        getSupportActionBar().setTitle("Geometry");
 
         list = (ListView) findViewById(R.id.list);
         final ArrayList<String> names = new ArrayList<>();
-        names.add("Expansions");
-        names.add("Factorization");
-        names.add("Indices");
-        names.add("Logarithms");
-        names.add("Banking");
+        names.add("Pythagoras Theorem");
 
         adapter = new ArrayAdapter(this, R.layout.list_item, names);
         list.setAdapter(adapter);
 
-            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    if (position == 0) {
-                        Intent intent_expansions = new Intent(Arithmetic.this, Expansions.class);
-                        startActivity(intent_expansions);
-                    }
-
-                    if (position == 1) {
-                        Intent intent_f = new Intent(Arithmetic.this, Factorization.class);
-                        startActivity(intent_f);
-                    }
-
-                    if (position == 2) {
-                        Intent intent_indices = new Intent(Arithmetic.this, Indices.class);
-                        startActivity(intent_indices);
-                    }
-
-                    if (position == 3) {
-                        Intent intent_logarithms = new Intent(Arithmetic.this, Logarithm.class);
-                        startActivity(intent_logarithms);
-                    }
-
-                    if (position == 4) {
-                        Intent intent_banking = new Intent(Arithmetic.this, Banking.class);
-                        startActivity(intent_banking);
-                    }
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                    Intent intent_pythagoras = new Intent(Geometry.this, Pythagoas_theorem.class);
+                    startActivity(intent_pythagoras);
                 }
-            });
+            }
+        });
     }
 
     @Override

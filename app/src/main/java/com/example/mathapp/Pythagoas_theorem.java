@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class Trigonometry_Table extends AppCompatActivity {
+public class Pythagoas_theorem extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     Toolbar toolbar;
@@ -18,7 +18,7 @@ public class Trigonometry_Table extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trigonometry__table);
+        setContentView(R.layout.activity_pythagoas_theorem);
 
         drawerLayout = findViewById(R.id.drawer);
         toolbar = findViewById(R.id.toolbar);
@@ -27,7 +27,7 @@ public class Trigonometry_Table extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent_back = new Intent(Trigonometry_Table.this, Math_Tables.class);
+                Intent intent_back = new Intent(Pythagoas_theorem.this, Arithmetic.class);
                 startActivity(intent_back);
             }
         });

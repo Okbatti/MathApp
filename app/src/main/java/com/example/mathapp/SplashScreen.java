@@ -26,6 +26,7 @@ public class SplashScreen extends AppCompatActivity implements NavigationView.On
     ImageView ahare_icon;
     ImageView arithmetic_logo;
     ImageView math_table_logo;
+    ImageView geometry_logo;
 
     @SuppressLint("RestrictedApi")
     @Override
@@ -75,6 +76,16 @@ public class SplashScreen extends AppCompatActivity implements NavigationView.On
                 startActivity(intent_math_tables);
             }
         });
+
+        geometry_logo = findViewById(R.id.geometry_logo);
+        geometry_logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_geometry_logo = new Intent(SplashScreen.this, Geometry.class);
+                startActivity(intent_geometry_logo);
+            }
+        });
+
 
     }
 
