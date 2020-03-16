@@ -48,7 +48,6 @@
             android:layout_below="@+id/arithmetic_logo"
             android:src="@drawable/trigonometry_logo" />
 
-
         <ImageView
             android:id="@+id/geometry_logo"
             android:layout_width="150dp"
