@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class Pythagoas_theorem extends AppCompatActivity {
+public class Area_Theorems extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     Toolbar toolbar;
@@ -18,7 +18,7 @@ public class Pythagoas_theorem extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pythagoas_theorem);
+        setContentView(R.layout.activity_area__theorems);
 
         drawerLayout = findViewById(R.id.drawer);
         toolbar = findViewById(R.id.toolbar);
@@ -27,7 +27,7 @@ public class Pythagoas_theorem extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent_back = new Intent(Pythagoas_theorem.this, Geometry.class);
+                Intent intent_back = new Intent(Area_Theorems.this, Geometry.class);
                 startActivity(intent_back);
             }
         });

@@ -56,6 +56,10 @@ public class Geometry extends AppCompatActivity implements NavigationView.OnNavi
         list = (ListView) findViewById(R.id.list);
         final ArrayList<String> names = new ArrayList<>();
         names.add("Pythagoras Theorem");
+        names.add("Triangles");
+        names.add("Area Theorem");
+        names.add("Inequalities");
+        names.add("Mid-Point Theorem");
 
         adapter = new ArrayAdapter(this, R.layout.list_item, names);
         list.setAdapter(adapter);
@@ -66,6 +70,26 @@ public class Geometry extends AppCompatActivity implements NavigationView.OnNavi
                 if (position == 0) {
                     Intent intent_pythagoras = new Intent(Geometry.this, Pythagoas_theorem.class);
                     startActivity(intent_pythagoras);
+                }
+
+                if (position == 1) {
+                    Intent intent_triangles = new Intent(Geometry.this, Triangles.class);
+                    startActivity(intent_triangles);
+                }
+
+                if (position == 2) {
+                    Intent intent_area_theorem = new Intent(Geometry.this, Area_Theorems.class);
+                    startActivity(intent_area_theorem);
+                }
+
+                if (position == 3) {
+                    Intent intent_inequalities = new Intent(Geometry.this, Inequalities.class);
+                    startActivity(intent_inequalities);
+                }
+
+                if (position == 4) {
+                    Intent intent_mid_point_theorem = new Intent(Geometry.this, Mid_point_theorem.class);
+                    startActivity(intent_mid_point_theorem);
                 }
             }
         });

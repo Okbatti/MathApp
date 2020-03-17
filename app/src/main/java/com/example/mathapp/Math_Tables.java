@@ -57,6 +57,9 @@ public class Math_Tables extends AppCompatActivity implements NavigationView.OnN
         list = (ListView) findViewById(R.id.list);
         final ArrayList<String> names = new ArrayList<>();
         names.add("Trigonometry Table");
+        names.add("Squares 1 to 10");
+        names.add("Cubes 1 to 10");
+        names.add("Factorial 1 to 10");
 
         adapter = new ArrayAdapter(this, R.layout.list_item, names);
         list.setAdapter(adapter);
@@ -67,6 +70,21 @@ public class Math_Tables extends AppCompatActivity implements NavigationView.OnN
                 if (position == 0) {
                     Intent intent_trigonometry_table = new Intent(Math_Tables.this, Trigonometry_Table.class);
                     startActivity(intent_trigonometry_table);
+                }
+
+                if (position == 1) {
+                    Intent intent_squares = new Intent(Math_Tables.this, Squares.class);
+                    startActivity(intent_squares);
+                }
+
+                if (position == 2) {
+                    Intent intent_cubes = new Intent(Math_Tables.this, Cubes.class);
+                    startActivity(intent_cubes);
+                }
+
+                if (position == 3) {
+                    Intent intent_factorials = new Intent(Math_Tables.this, Factorials.class);
+                    startActivity(intent_factorials);
                 }
             }
         });

@@ -33,15 +33,15 @@
             android:layout_marginLeft="75dp"
             android:layout_marginTop="14dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Pythagoras Theorem"
+            android:text="Area Theorem"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp" />
 
         <ImageView
-            android:id="@+id/pythagoras_theorem"
+            android:id="@+id/area_theorem_pic"
             android:layout_width="700dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/pythagoras_pic" />
+            android:src="@drawable/area_theorems_pic" />
 
 
     </RelativeLayout>

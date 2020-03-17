@@ -39,9 +39,10 @@
 
         <ImageView
             android:id="@+id/pythagoras_theorem"
+            android:layout_marginBottom="40dp"
             android:layout_width="700dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/pythagoras_pic" />
+            android:src="@drawable/mid_point_theorem_pic" />
 
 
     </RelativeLayout>
