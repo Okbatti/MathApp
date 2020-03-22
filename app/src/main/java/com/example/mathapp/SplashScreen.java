@@ -27,6 +27,7 @@ public class SplashScreen extends AppCompatActivity implements NavigationView.On
     ImageView arithmetic_logo;
     ImageView math_table_logo;
     ImageView geometry_logo;
+    ImageView trigonometry_logo;
 
     @SuppressLint("RestrictedApi")
     @Override
@@ -46,18 +47,6 @@ public class SplashScreen extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
         getSupportActionBar().setTitle("DashBoard");
-
-        ahare_icon = findViewById(R.id.share_icon);
-        ahare_icon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent shareIntent = new Intent();
-                shareIntent.setType("text/plain");
-                shareIntent.setAction(Intent.ACTION_SEND);
-                shareIntent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.apps.nbu.paisa.user"));
-                startActivity(Intent.createChooser(shareIntent, "Share using: "));
-            }
-        });
 
         arithmetic_logo = findViewById(R.id.arithmetic_logo);
         arithmetic_logo.setOnClickListener(new View.OnClickListener() {
@@ -86,7 +75,14 @@ public class SplashScreen extends AppCompatActivity implements NavigationView.On
             }
         });
 
-
+        trigonometry_logo = findViewById(R.id.trigonometry_logo);
+        trigonometry_logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_trigonometry_logo = new Intent(SplashScreen.this, Trigonometry.class);
+                startActivity(intent_trigonometry_logo);
+            }
+        });
     }
 
     @Override
@@ -106,4 +102,5 @@ public class SplashScreen extends AppCompatActivity implements NavigationView.On
 
         return false;
     }
+
 }

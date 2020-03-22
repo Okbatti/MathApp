@@ -1,6 +1,6 @@
 package com.example.mathapp;
+
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -11,24 +11,30 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class AboutUs extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+import java.util.ArrayList;
+
+public class Trigonometry extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
     Toolbar toolbar;
     NavigationView navigationView;
     ActionBarDrawerToggle toggle;
+    ArrayAdapter adapter;
+    ListView list;
+    EditText theFilter;
 
     @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about_us);
+        setContentView(R.layout.activity_trigonometry);
 
         drawerLayout = findViewById(R.id.drawer);
         toolbar = findViewById(R.id.toolbar);
@@ -40,7 +46,31 @@ public class AboutUs extends AppCompatActivity implements NavigationView.OnNavig
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-        getSupportActionBar().setTitle("About Us");
+        getSupportActionBar().setTitle("Trigonometry");
+
+
+        list = (ListView) findViewById(R.id.list);
+        final ArrayList<String> names = new ArrayList<>();
+        names.add("Trigonometrical Ratio");
+        names.add("Trigonometric Identities");
+
+        adapter = new ArrayAdapter(this, R.layout.list_item, names);
+        list.setAdapter(adapter);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                    Intent intent_trigonometrical_ratio = new Intent(Trigonometry.this, Trigonometrical_ratio.class);
+                    startActivity(intent_trigonometrical_ratio);
+                }
+
+                if (position == 1) {
+                    Intent intent_trigonometrical_identities = new Intent(Trigonometry.this, Trigonometric_identities.class);
+                    startActivity(intent_trigonometrical_identities);
+                }
+            }
+        });
     }
 
     @Override
@@ -57,7 +87,6 @@ public class AboutUs extends AppCompatActivity implements NavigationView.OnNavig
                 startActivity(i2);
                 break;
         }
-
         return false;
     }
 }

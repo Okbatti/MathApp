@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -35,6 +36,7 @@ public class Arithmetic extends AppCompatActivity implements NavigationView.OnNa
     ArrayAdapter adapter;
     ListView list;
     EditText theFilter;
+    ImageView back;
 
     @SuppressLint("RestrictedApi")
     @Override
@@ -62,6 +64,7 @@ public class Arithmetic extends AppCompatActivity implements NavigationView.OnNa
         names.add("Indices");
         names.add("Logarithms");
         names.add("Banking");
+        names.add("Solids");
 
         adapter = new ArrayAdapter(this, R.layout.list_item, names);
         list.setAdapter(adapter);
@@ -92,6 +95,11 @@ public class Arithmetic extends AppCompatActivity implements NavigationView.OnNa
                     if (position == 4) {
                         Intent intent_banking = new Intent(Arithmetic.this, Banking.class);
                         startActivity(intent_banking);
+                    }
+
+                    if (position == 5) {
+                        Intent intent_solids = new Intent(Arithmetic.this, Solids.class);
+                        startActivity(intent_solids);
                     }
                 }
             });

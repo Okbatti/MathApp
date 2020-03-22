@@ -33,16 +33,16 @@
             android:layout_marginLeft="75dp"
             android:layout_marginTop="14dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Mid-Point Theorem"
+            android:text="Trigonometric Identities"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp" />
 
         <ImageView
-            android:id="@+id/pythagoras_theorem"
-            android:layout_marginBottom="40dp"
+            android:id="@+id/trigonometric_identities"
             android:layout_width="700dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/mid_point_theorem_pic" />
+            android:src="@drawable/trigonometric_identities"
+            android:layout_marginBottom="100dp"/>
 
 
     </RelativeLayout>
