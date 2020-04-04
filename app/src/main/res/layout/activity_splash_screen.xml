@@ -27,7 +27,7 @@
             android:layout_marginLeft="40dp"
             android:layout_alignParentLeft="true"
             android:layout_marginRight="80dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="125dp"
             android:src="@drawable/arithmetic_logo" />
 
         <ImageView
@@ -36,7 +36,7 @@
             android:layout_marginRight="40dp"
             android:layout_alignParentRight="true"
             android:layout_height="125dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="125dp"
             android:src="@drawable/math_tables" />
 
         <ImageView
