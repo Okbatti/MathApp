@@ -1,4 +1,4 @@
-package com.example.mathapp;
+package com.test.mathapp;
 
         import androidx.appcompat.app.ActionBarDrawerToggle;
         import androidx.appcompat.app.AppCompatActivity;
