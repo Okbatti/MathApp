@@ -14,6 +14,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/share_logo"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_below="@+id/geometry_logo"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/share_icon" />
+
+        <ImageView
+            android:id="@+id/calculator_logo"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_below="@+id/geometry_logo"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="80dp"
+            android:src="@drawable/calculator_logo" />
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -24,19 +45,19 @@
             android:id="@+id/arithmetic_logo"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:layout_marginLeft="40dp"
             android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="100dp"
             android:layout_marginRight="80dp"
-            android:layout_marginTop="125dp"
             android:src="@drawable/arithmetic_logo" />
 
         <ImageView
             android:id="@+id/math_tables_logo"
             android:layout_width="125dp"
-            android:layout_marginRight="40dp"
-            android:layout_alignParentRight="true"
             android:layout_height="125dp"
-            android:layout_marginTop="125dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="40dp"
             android:src="@drawable/math_tables" />
 
         <ImageView
@@ -45,7 +66,7 @@
             android:layout_height="125dp"
             android:layout_below="@+id/arithmetic_logo"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:layout_marginRight="40dp"
             android:src="@drawable/trigonometry_logo" />
 
@@ -54,10 +75,10 @@
             android:layout_width="125dp"
             android:layout_height="125dp"
             android:layout_below="@+id/arithmetic_logo"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="80dp"
-            android:layout_marginTop="50dp"
             android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="80dp"
             android:src="@drawable/geometry_logo" />
 
     </RelativeLayout>

@@ -28,6 +28,7 @@ public class SplashScreen extends AppCompatActivity implements NavigationView.On
     ImageView math_table_logo;
     ImageView geometry_logo;
     ImageView trigonometry_logo;
+    ImageView calculator_logo;
 
     @SuppressLint("RestrictedApi")
     @Override
@@ -81,6 +82,15 @@ public class SplashScreen extends AppCompatActivity implements NavigationView.On
             public void onClick(View v) {
                 Intent intent_trigonometry_logo = new Intent(SplashScreen.this, Trigonometry.class);
                 startActivity(intent_trigonometry_logo);
+            }
+        });
+
+        calculator_logo = findViewById(R.id.calculator_logo);
+        calculator_logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_calculator_logo = new Intent(SplashScreen.this, Calculator.class);
+                startActivity(intent_calculator_logo);
             }
         });
     }

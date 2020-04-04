@@ -10,79 +10,103 @@
         android:roundIcon="@drawable/app_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Calculator"></activity>
         <activity
             android:name=".Solids"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Trigonometric_identities"
+        <activity
+            android:name=".Trigonometric_identities"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Trigonometry"
+        <activity
+            android:name=".Trigonometry"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Trigonometrical_ratio"
+        <activity
+            android:name=".Trigonometrical_ratio"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Mid_point_theorem"
+        <activity
+            android:name=".Mid_point_theorem"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Inequalities"
+        <activity
+            android:name=".Inequalities"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Area_Theorems"
+        <activity
+            android:name=".Area_Theorems"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Factorials"
+        <activity
+            android:name=".Factorials"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Cubes"
+        <activity
+            android:name=".Cubes"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Squares"
+        <activity
+            android:name=".Squares"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Triangles"
+        <activity
+            android:name=".Triangles"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Pythagoas_theorem"
+        <activity
+            android:name=".Pythagoas_theorem"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Geometry"
+        <activity
+            android:name=".Geometry"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Trigonometry_Table"
+        <activity
+            android:name=".Trigonometry_Table"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Math_Tables"
+        <activity
+            android:name=".Math_Tables"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Banking"
+        <activity
+            android:name=".Banking"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Indices"
+        <activity
+            android:name=".Indices"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Logarithm"
+        <activity
+            android:name=".Logarithm"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Factorization"
+        <activity
+            android:name=".Factorization"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Expansions"
+        <activity
+            android:name=".Expansions"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Arithmetic"
+        <activity
+            android:name=".Arithmetic"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".AboutUs"
+        <activity
+            android:name=".AboutUs"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".SplashScreen"
+        <activity
+            android:name=".SplashScreen"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity" >
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -92,9 +116,9 @@
 
         <meta-data
             android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
-            android:resource="@array/preloaded_fonts" />
+            tools:ignore="LockedOrientationActivity" />
     </application>
 
 </manifest>
