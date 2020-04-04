@@ -29,6 +29,7 @@ public class SplashScreen extends AppCompatActivity implements NavigationView.On
     ImageView geometry_logo;
     ImageView trigonometry_logo;
     ImageView calculator_logo;
+    ImageView share_logo;
 
     @SuppressLint("RestrictedApi")
     @Override
@@ -91,6 +92,19 @@ public class SplashScreen extends AppCompatActivity implements NavigationView.On
             public void onClick(View v) {
                 Intent intent_calculator_logo = new Intent(SplashScreen.this, Calculator.class);
                 startActivity(intent_calculator_logo);
+            }
+        });
+
+        share_logo = findViewById(R.id.share_logo);
+        share_logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                String shareBody = "Math Formulae App Url: " +
+                        "https://play.google.com/store/apps/details?id=com.test.mathapp";
+                intent.putExtra(Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(intent, "Share using: "));
             }
         });
     }
