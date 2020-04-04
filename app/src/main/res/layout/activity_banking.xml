@@ -38,6 +38,7 @@
             android:textSize="20dp" />
 
         <ImageView
+            android:layout_marginTop="70dp"
             android:id="@+id/banking"
             android:layout_width="700dp"
             android:layout_height="wrap_content"

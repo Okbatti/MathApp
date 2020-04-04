@@ -22,39 +22,42 @@
 
         <ImageView
             android:id="@+id/arithmetic_logo"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginRight="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="150dp"
             android:src="@drawable/arithmetic_logo" />
 
         <ImageView
             android:id="@+id/math_tables_logo"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="100dp"
+            android:layout_width="125dp"
             android:layout_marginRight="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="125dp"
+            android:layout_marginTop="150dp"
             android:src="@drawable/math_tables" />
 
         <ImageView
             android:id="@+id/trigonometry_logo"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
             android:layout_below="@+id/arithmetic_logo"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:layout_marginRight="40dp"
             android:src="@drawable/trigonometry_logo" />
 
         <ImageView
             android:id="@+id/geometry_logo"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
             android:layout_below="@+id/arithmetic_logo"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentLeft="true"
             android:src="@drawable/geometry_logo" />
 
     </RelativeLayout>

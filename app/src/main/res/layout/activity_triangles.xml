@@ -38,6 +38,8 @@
             android:textSize="20dp" />
 
         <ImageView
+            android:layout_marginTop="50dp"
+            android:padding="10dp"
             android:id="@+id/triangles"
             android:layout_width="700dp"
             android:layout_height="wrap_content"

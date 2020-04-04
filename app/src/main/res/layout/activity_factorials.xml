@@ -38,6 +38,7 @@
             android:textSize="20dp" />
 
         <ImageView
+            android:layout_marginTop="50dp"
             android:id="@+id/factorial_pic"
             android:padding="50dp"
             android:layout_width="700dp"
